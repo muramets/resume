@@ -6,6 +6,7 @@
     <title>MonkeyType Resume</title>
     <!-- Fonts included from Google -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⌨️</text></svg>">
     <!-- Inline CSS - all styles in one file -->
     <style>
@@ -18,6 +19,7 @@
             --sub-alt-color: #2c2e31;
             --error-color: #ca4754;
             --font-family: 'Roboto Mono', monospace;
+            --roundness: 4px;
         }
 
         * {
@@ -66,7 +68,7 @@
 
         .logo-text {
             font-size: 1.5rem;
-            color: var(--main-color);
+            color: var(--text-color);
             font-weight: 500;
         }
 
@@ -75,45 +77,93 @@
             color: var(--sub-color);
         }
 
-        /* Navigation Menu */
-        .navigation {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 1.5rem;
+        /* Monkeytype Navigation Menu Style */
+        #testConfig {
+            --horizontalPadding: 1em;
+            --verticalPadding: 1em;
+            display: grid;
+            font-size: 0.75rem;
+            gap: 0.5em;
+            grid-auto-flow: column;
+            height: max-content;
+            width: 100%;
+            transition: opacity 0.125s;
+            justify-content: space-around;
             margin-bottom: 3rem;
-            padding: 1rem;
-            border-radius: 5px;
-            background-color: rgba(50, 52, 55, 0.8);
         }
-
-        .nav-item {
+        
+        #testConfig .row {
             display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            padding: 0.5rem 1rem;
-            cursor: pointer;
-            transition: color 0.3s ease;
-            border-radius: 3px;
+            background: var(--sub-alt-color);
+            border-radius: var(--roundness);
         }
-
-        .nav-item:hover {
-            color: var(--main-color);
-            background-color: rgba(100, 102, 105, 0.3);
+        
+        #testConfig .spacer {
+            height: auto;
+            width: 0.5em;
+            border-radius: calc(var(--roundness) / 2);
+            background: var(--bg-color);
+            margin: 0.75em 0;
+            transition: 250ms;
         }
-
-        .nav-item.active {
-            color: var(--main-color);
-            background-color: rgba(100, 102, 105, 0.3);
+        
+        #testConfig .mode,
+        #testConfig .puncAndNum,
+        #testConfig .customOptions {
+            display: grid;
+            grid-auto-flow: column;
         }
-
-        .nav-item .icon {
+        
+        #testConfig .textButton {
+            padding: var(--verticalPadding) var(--horizontalPadding);
+        }
+        
+        #testConfig .textButton:first-child {
+            margin-left: var(--horizontalPadding);
+        }
+        
+        #testConfig .textButton:last-child {
+            margin-right: var(--horizontalPadding);
+        }
+        
+        /* TextButton Styling */
+        .textButton {
             color: var(--sub-color);
+            cursor: pointer;
+            transition: background 0.125s, color 0.125s, opacity 0.125s;
+            padding: 0.5em;
+            border-radius: var(--roundness);
+            background: none;
+            text-align: center;
+            -webkit-user-select: none;
+            user-select: none;
+            align-content: center;
+            height: min-content;
+            line-height: 1.25;
+            appearance: none;
+            border: none;
+            font-family: inherit;
+            font-size: 1em;
+            display: inline-flex;
+            gap: 0.5em;
+            align-items: baseline;
+            justify-content: center;
         }
-
-        .nav-item:hover .icon,
-        .nav-item.active .icon {
+        
+        .textButton:hover {
+            color: var(--text-color);
+            background: none;
+            outline: none;
+        }
+        
+        .textButton:active {
+            color: var(--sub-color);
+            background: none;
+        }
+        
+        .textButton.active {
             color: var(--main-color);
+            background: none;
         }
 
         /* Content Area */
@@ -352,23 +402,27 @@
             </div>
         </header>
 
-        <!-- Navigation Menu -->
-        <div class="navigation">
-            <div class="nav-item" data-section="about-me">
-                <span class="icon">@</span>
-                <span class="text">About me</span>
-            </div>
-            <div class="nav-item" data-section="what-i-can-do">
-                <span class="icon">#</span>
-                <span class="text">What I Can Offer</span>
-            </div>
-            <div class="nav-item" data-section="what-i-cant-do">
-                <span class="icon">X</span>
-                <span class="text">What I Won't Do</span>
-            </div>
-            <div class="nav-item" data-section="price-terms">
-                <span class="icon">$$</span>
-                <span class="text">Price & Terms</span>
+        <!-- Navigation Menu - Monkeytype Style -->
+        <div id="testConfig" class="full-width">
+            <div class="row">
+                <div class="mode">
+                    <button class="textButton nav-item active" data-section="about-me">
+                        <i class="fas fa-fw fa-at"></i>
+                        About me
+                    </button>
+                    <button class="textButton nav-item" data-section="what-i-can-do">
+                        <i class="fas fa-fw fa-hashtag"></i>
+                        What I Can Offer
+                    </button>
+                    <button class="textButton nav-item" data-section="what-i-cant-do">
+                        <i class="fas fa-fw fa-times"></i>
+                        What I Won't Do
+                    </button>
+                    <button class="textButton nav-item" data-section="price-terms">
+                        <i class="fas fa-fw fa-dollar-sign"></i>
+                        Price & Terms
+                    </button>
+                </div>
             </div>
         </div>
 
