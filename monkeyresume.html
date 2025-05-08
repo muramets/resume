@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MonkeyType Resume</title>
+    <!-- Fonts included from Google -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400&display=swap">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⌨️</text></svg>">
+    <!-- Inline CSS - all styles in one file -->
+    <style>
+        /* MonkeyType-inspired CSS */
+        :root {
+            --bg-color: #323437;
+            --main-color: #e2b714;
+            --text-color: #d1d0c5;
+            --sub-color: #646669;
+            --sub-alt-color: #2c2e31;
+            --error-color: #ca4754;
+            --font-family: 'Roboto Mono', monospace;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            font-family: var(--font-family);
+            line-height: 1.6;
+            height: 100vh;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* Header Styling */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 2rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid var(--sub-color);
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .logo-icon {
+            font-size: 1.5rem;
+        }
+
+        .logo-text {
+            font-size: 1.5rem;
+            color: var(--main-color);
+            font-weight: 500;
+        }
+
+        .user-info {
+            font-size: 1rem;
+            color: var(--sub-color);
+        }
+
+        /* Navigation Menu */
+        .navigation {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            margin-bottom: 3rem;
+            padding: 1rem;
+            border-radius: 5px;
+            background-color: rgba(50, 52, 55, 0.8);
+        }
+
+        .nav-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 1rem;
+            cursor: pointer;
+            transition: color 0.3s ease;
+            border-radius: 3px;
+        }
+
+        .nav-item:hover {
+            color: var(--main-color);
+            background-color: rgba(100, 102, 105, 0.3);
+        }
+
+        .nav-item.active {
+            color: var(--main-color);
+            background-color: rgba(100, 102, 105, 0.3);
+        }
+
+        .nav-item .icon {
+            color: var(--sub-color);
+        }
+
+        .nav-item:hover .icon,
+        .nav-item.active .icon {
+            color: var(--main-color);
+        }
+
+        /* Content Area */
+        .content-area {
+            flex: 1;
+            padding: 2rem;
+            background-color: rgba(50, 52, 55, 0.3);
+            border-radius: 5px;
+            overflow-y: auto;
+        }
+
+        .content-section {
+            display: none;
+            opacity: 0;
+            transition: opacity 0.5s ease;
+        }
+
+        .content-section.active {
+            display: block;
+            opacity: 1;
+        }
+
+        .typing-effect {
+            color: var(--main-color);
+            margin-bottom: 2rem;
+            font-size: 2rem;
+            font-weight: 500;
+            border-right: 0.15em solid var(--main-color);
+            white-space: nowrap;
+            overflow: hidden;
+            width: 0;
+            animation: typing 1.5s steps(20, end) forwards, blink 0.75s step-end infinite;
+        }
+
+        .typing-container {
+            margin-top: 2rem;
+        }
+
+        .typing-text {
+            margin-bottom: 1rem;
+            overflow: hidden;
+            opacity: 0;
+            transform: translateY(10px);
+        }
+
+        /* Enhanced Content Styling */
+        .subheading {
+            color: var(--main-color);
+            font-size: 1.3rem;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            font-weight: 500;
+            border-bottom: 1px solid var(--main-color);
+            padding-bottom: 0.5rem;
+            display: inline-block;
+        }
+
+        /* Offer Styling with Hierarchy */
+        .offer-item {
+            margin-bottom: 1.5rem;
+        }
+
+        .main-offer {
+            border-left: 2px solid transparent;
+            padding-left: 0;
+            transition: border-color 0.2s ease;
+        }
+
+        .main-offer:hover {
+            border-left: 2px solid var(--main-color);
+        }
+
+        .offer-title {
+            color: var(--main-color);
+            font-weight: 500;
+        }
+
+        .sub-offer {
+            margin-top: 0.5rem;
+            margin-left: 1.5rem;
+            padding-left: 0.75rem;
+            border-left: 1px solid var(--sub-color);
+            opacity: 0;
+            transform: translateY(5px);
+        }
+
+        .sub-offer.active {
+            opacity: 1;
+            transform: translateY(0);
+            transition: opacity 0.3s ease, transform 0.3s ease;
+        }
+
+        .footnote-info {
+            color: var(--sub-color);
+            font-size: 0.85em;
+            margin-top: 0.2rem;
+            opacity: 0.8;
+        }
+
+        .supplementary-info {
+            color: var(--sub-color);
+            font-size: 0.9em;
+        }
+
+        .skills-list {
+            margin-top: 1rem;
+            margin-left: 1rem;
+        }
+
+        .skill-item {
+            position: relative;
+            padding-left: 1rem;
+        }
+
+        .skill-item::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: var(--main-color);
+        }
+
+        .constraint-list {
+            margin-top: 1rem;
+        }
+
+        .constraint-item {
+            font-weight: 500;
+        }
+
+        .highlight-number {
+            color: var(--main-color);
+            font-weight: 500;
+        }
+
+        .terms-list {
+            margin-top: 1rem;
+        }
+
+        .term-title {
+            color: var(--main-color);
+            font-weight: 500;
+        }
+
+        /* Footer */
+        footer {
+            margin-top: 2rem;
+            padding-top: 1rem;
+            text-align: center;
+            color: var(--sub-color);
+            font-size: 0.9rem;
+            border-top: 1px solid var(--sub-color);
+        }
+
+        /* Animations */
+        @keyframes typing {
+            from { width: 0 }
+            to { width: 100% }
+        }
+
+        @keyframes blink {
+            from, to { border-color: transparent }
+            50% { border-color: var(--main-color) }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                padding: 1rem;
+            }
+            
+            .navigation {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0.5rem;
+            }
+            
+            .content-area {
+                padding: 1rem;
+            }
+            
+            .typing-effect {
+                font-size: 1.5rem;
+            }
+            
+            .subheading {
+                font-size: 1.2rem;
+            }
+        }
+
+        /* Cursor Animation Effect */
+        .cursor-effect {
+            position: absolute;
+            width: 3px;
+            height: 3px;
+            background-color: var(--main-color);
+            border-radius: 50%;
+            pointer-events: none;
+            opacity: 0.3;
+            z-index: 9999;
+            animation: cursorFade 0.4s ease-out forwards;
+        }
+
+        @keyframes cursorFade {
+            0% {
+                transform: scale(1);
+                opacity: 0.3;
+            }
+            100% {
+                transform: scale(1.5);
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header with logo -->
+        <header>
+            <div class="logo">
+                <span class="logo-icon">⌨️</span>
+                <span class="logo-text">monkeyresume</span>
+            </div>
+            <div class="user-info">
+                <span class="username">muramets</span>
+            </div>
+        </header>
+
+        <!-- Navigation Menu -->
+        <div class="navigation">
+            <div class="nav-item" data-section="about-me">
+                <span class="icon">@</span>
+                <span class="text">About me</span>
+            </div>
+            <div class="nav-item" data-section="what-i-can-do">
+                <span class="icon">#</span>
+                <span class="text">What I Can Offer</span>
+            </div>
+            <div class="nav-item" data-section="what-i-cant-do">
+                <span class="icon">A</span>
+                <span class="text">What I Won't Do</span>
+            </div>
+            <div class="nav-item" data-section="price-terms">
+                <span class="icon">$$</span>
+                <span class="text">Price & Terms</span>
+            </div>
+        </div>
+
+        <!-- Content Area -->
+        <div class="content-area">
+            <div id="about-me" class="content-section active">
+                <h1 class="typing-effect">About me</h1>
+                <div class="typing-container">
+                    <p class="typing-text">Hello! I'm muramets — a professional with experience across the music industry, product development, and the YouTube ecosystem.</p>
+                    <p class="typing-text">My background includes working with artists, launching and growing YouTube channels, developing product strategies, and researching emerging trends.</p>
+                    <p class="typing-text">I'm passionate about building solutions that combine design, functionality, and automation — and I thrive on delivering end-to-end projects across diverse domains.</p>
+                </div>
+            </div>
+
+            <div id="what-i-can-do" class="content-section">
+                <h1 class="typing-effect">What I Can Offer</h1>
+                <div class="typing-container">
+                    <div class="offer-item main-offer">
+                        <p class="typing-text"><span class="offer-title">Feature-level implementation</span> — either based on a defined spec or scoped independently by me based on business needs.</p>
+                    </div>
+                    
+                    <div class="offer-item main-offer">
+                        <p class="typing-text"><span class="offer-title">YouTube channel management</span> — including content strategy, audience engagement, and analytics.</p>
+                        <div class="sub-offer">
+                            <p class="typing-text">Full YouTube channel launch packages. Workflow fully handed over; your stack used optionally.</p>
+                            <p class="typing-text footnote-info">30 videos · 150 hours · €4,500 · delivery in 3 months</p>
+                        </div>
+                    </div>
+                    
+                    <div class="offer-item main-offer">
+                        <p class="typing-text"><span class="offer-title">Music industry insights</span> — leveraging my experience to inform product development and marketing strategies. With flexible depth and revision flow based on scope.</p>
+                    </div>
+                    
+                    <div class="offer-item main-offer">
+                        <p class="typing-text"><span class="offer-title">Research and analysis</span> — including market research, competitive analysis, and trend forecasting.</p>
+                    </div>
+                    
+                    <div class="offer-item main-offer">
+                        <p class="typing-text"><span class="offer-title">Automation and optimization</span> — identifying opportunities to streamline processes and improve efficiency.</p>
+                    </div>
+                    
+                    <div class="offer-item main-offer">
+                        <p class="typing-text"><span class="offer-title">Experimental projects</span> — e.g. AI-generated music tracks for Shorts, or launching AI Artists.</p>
+                        <div class="sub-offer">
+                            <p class="typing-text footnote-info">Includes up to 5 no-commit test rounds — no further work if it's not a fit.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="offer-item main-offer">
+                        <p class="typing-text"><span class="offer-title">AI-driven research or goal-setting</span> — can define research topics based on business needs.</p>
+                    </div>
+                    
+                    <h3 class="subheading typing-text">My skills:</h3>
+                    
+                    <div class="skills-list">
+                        <p class="typing-text skill-item">Design and develop user-centered solutions</p>
+                        <p class="typing-text skill-item">Implement strategic thinking to solve complex problems</p>
+                        <p class="typing-text skill-item">Adapt to changing requirements and environments</p>
+                        <p class="typing-text skill-item">Create minimalist, effective presentations</p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="what-i-cant-do" class="content-section">
+                <h1 class="typing-effect">What I Won't Do</h1>
+                <div class="typing-container">
+                    <div class="constraint-list">
+                        <p class="typing-text"><span class="constraint-item"><span class="highlight-number">1.</span> Take ownership of processes outside of the allocated project team</span></p>
+                        <p class="typing-text"><span class="constraint-item"><span class="highlight-number">2.</span> Join Slack threads for projects I'm not staffed on</span></p>
+                        <div class="sub-offer">
+                            <p class="typing-text footnote-info">— but open to short discovery if needed.</p>
+                        </div>
+                        <p class="typing-text"><span class="constraint-item"><span class="highlight-number">3.</span> Participate in calls unrelated to defined workstreams</span></p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="price-terms" class="content-section">
+                <h1 class="typing-effect">Price & Terms</h1>
+                <div class="typing-container">
+                    <div class="terms-list">
+                        <p class="typing-text"><span class="term-title">Base rate:</span> $35 per hour for 2025</p>
+                        <p class="typing-text"><span class="term-title">Delivery model:</span> Full-cycle execution per project scope</p>
+                        <p class="typing-text"><span class="term-title">Delivery timelines</span> — agreed upfront and fixed per engagement</p>
+                        <div class="sub-offer">
+                            <p class="typing-text footnote-info">No midstream urgency added.</p>
+                        </div>
+                        <p class="typing-text"><span class="term-title">Billing:</span> I handle all rate setups and logistics within your current default payment system; payment at final step with your approval</p>
+                        <p class="typing-text"><span class="term-title">Tools & setup:</span> I use my own workflows unless otherwise agreed</p>
+                        <p class="typing-text"><span class="term-title">Work-for-hire basis:</span> Transparent terms, clear outcomes, no long-term obligation</p>
+                        <p class="typing-text"><span class="term-title">Project-based pricing</span> available upon request</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer>
+            <div class="footer-text">© 2025 muramets</div>
+        </footer>
+    </div>
+
+    <!-- Inline JavaScript - all scripts in one file -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Get all navigation items and content sections
+            const navItems = document.querySelectorAll('.nav-item');
+            const contentSections = document.querySelectorAll('.content-section');
+            
+            // Set initial active section
+            let activeSection = document.getElementById('about-me');
+            let activeNavItem = document.querySelector('[data-section="about-me"]');
+            activeNavItem.classList.add('active');
+            
+            // Initialize typing animation for initial active section
+            setTimeout(() => {
+                animateTypingTexts(activeSection);
+            }, 1500); // Start after heading animation
+            
+            // Add click event listeners to navigation items
+            navItems.forEach(item => {
+                item.addEventListener('click', () => {
+                    // Get the section ID from the data attribute
+                    const sectionId = item.getAttribute('data-section');
+                    const targetSection = document.getElementById(sectionId);
+                    
+                    // Skip if clicking the already active section
+                    if (targetSection === activeSection) return;
+                    
+                    // Remove active class from current active elements
+                    activeNavItem.classList.remove('active');
+                    activeSection.classList.remove('active');
+                    
+                    // Add active class to clicked nav item and corresponding section
+                    item.classList.add('active');
+                    targetSection.classList.add('active');
+                    
+                    // Reset and start animations for the new section
+                    resetTypingEffects(targetSection);
+                    setTimeout(() => {
+                        animateTypingTexts(targetSection);
+                    }, 1500); // Start after heading animation
+                    
+                    // Update active references
+                    activeSection = targetSection;
+                    activeNavItem = item;
+                });
+            });
+            
+            // Function to animate the typing texts in a section
+            function animateTypingTexts(section) {
+                const typingTexts = section.querySelectorAll('.typing-text');
+                const subOffers = section.querySelectorAll('.sub-offer');
+                
+                // First, ensure all sub-offers are reset
+                subOffers.forEach(subOffer => {
+                    subOffer.classList.remove('active');
+                });
+                
+                // Animate main text items
+                typingTexts.forEach((text, index) => {
+                    // Add animation with delay based on index
+                    setTimeout(() => {
+                        text.style.animation = 'fadeInUp 0.5s ease forwards';
+                    }, index * 200); // Stagger the animations
+                });
+                
+                // Activate all sub-offers with a delay after texts start animating
+                setTimeout(() => {
+                    subOffers.forEach(subOffer => {
+                        subOffer.classList.add('active');
+                    });
+                }, typingTexts.length * 50 + 80); // Wait for most texts to appear
+            }
+            
+            // Function to reset typing effects for a section
+            function resetTypingEffects(section) {
+                // Reset heading animation
+                const heading = section.querySelector('.typing-effect');
+                heading.style.animation = 'none';
+                heading.offsetHeight; // Trigger reflow
+                heading.style.animation = 'typing 1.5s steps(20, end) forwards, blink 0.75s step-end infinite';
+                
+                // Reset paragraph animations
+                const typingTexts = section.querySelectorAll('.typing-text');
+                typingTexts.forEach(text => {
+                    text.style.animation = 'none';
+                    text.style.opacity = '0';
+                    text.style.transform = 'translateY(10px)';
+                });
+                
+                // Reset sub-offers
+                const subOffers = section.querySelectorAll('.sub-offer');
+                subOffers.forEach(subOffer => {
+                    subOffer.classList.remove('active');
+                });
+            }
+            
+            // Add cursor hover effect for subtle mouse trail
+            document.addEventListener('mousemove', (e) => {
+                // Create cursor effect at a reduced frequency for performance
+                if (Math.random() > 0.4) { // Only create effects 20% of the time for lightweight trail
+                    const cursor = document.createElement('div');
+                    cursor.classList.add('cursor-effect');
+                    cursor.style.left = e.pageX + 'px';
+                    cursor.style.top = e.pageY + 'px';
+                    
+                    // Make the effect smaller and more subtle
+                    cursor.style.opacity = '0.5'; // Lower opacity
+                    cursor.style.width = '3px';
+                    cursor.style.height = '3px';
+                    
+                    document.body.appendChild(cursor);
+                    
+                    // Remove after animation completes
+                    setTimeout(() => {
+                        cursor.remove();
+                    }, 400);
+                }
+            });
+        });
+    </script>
+</body>
+</html>
