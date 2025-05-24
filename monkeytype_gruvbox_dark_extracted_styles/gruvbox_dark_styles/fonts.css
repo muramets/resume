@@ -1,7 +1,7 @@
 /* This file defines the @font-face rules for various font families used in the application. */
 /* Each @font-face rule specifies the font family name, style, weight, display behavior, and the source URL for the font file. */
-/* Font files are expected to be in WOFF2 format and located in the /webfonts/ directory for general use, */
-/* and in the /webfonts-preview/ directory for preview purposes. */
+/* Font files are expected to be in WOFF2 format and located in the ../webfonts/ directory for general use, */
+/* and in the ../webfonts-preview/ directory for preview purposes. */
 
 /* Font definition for 'Source Code Pro' */
 @font-face {
@@ -9,7 +9,7 @@
   font-style: normal;
   font-weight: 400;
   font-display: block;
-  src: url("/webfonts/SourceCodePro-Regular.woff2") format("woff2"); /* Path to SourceCodePro-Regular.woff2 */
+  src: url("../webfonts/SourceCodePro-Regular.woff2") format("woff2"); /* Path to SourceCodePro-Regular.woff2 */
 }
 /* Font definition for 'Source Code Pro Preview' */
 @font-face {
@@ -17,7 +17,7 @@
   font-style: normal;
   font-weight: 400;
   font-display: block;
-  src: url("/webfonts-preview/SourceCodePro-Regular.woff2") format("woff2"); /* Path to SourceCodePro-Regular.woff2 for preview */
+  src: url("../webfonts-preview/SourceCodePro-Regular.woff2") format("woff2"); /* Path to SourceCodePro-Regular.woff2 for preview */
 }
 
 /* Font definition for 'JetBrains Mono' */
@@ -26,7 +26,7 @@
   font-style: normal;
   font-weight: 400;
   font-display: block;
-  src: url("/webfonts/JetBrainsMono-Regular.woff2") format("woff2"); /* Path to JetBrainsMono-Regular.woff2 */
+  src: url("../webfonts/JetBrainsMono-Regular.woff2") format("woff2"); /* Path to JetBrainsMono-Regular.woff2 */
 }
 /* Font definition for 'JetBrains Mono Preview' */
 @font-face {
@@ -34,7 +34,7 @@
   font-style: normal;
   font-weight: 400;
   font-display: block;
-  src: url("/webfonts-preview/JetBrainsMono-Regular.woff2") format("woff2"); /* Path to JetBrainsMono-Regular.woff2 for preview */
+  src: url("../webfonts-preview/JetBrainsMono-Regular.woff2") format("woff2"); /* Path to JetBrainsMono-Regular.woff2 for preview */
 }
 
 /* Font definition for 'Montserrat' */
@@ -43,7 +43,7 @@
   font-style: normal;
   font-weight: 400;
   font-display: block;
-  src: url("/webfonts/Montserrat-Regular.woff2") format("woff2"); /* Path to Montserrat-Regular.woff2 */
+  src: url("../webfonts/Montserrat-Regular.woff2") format("woff2"); /* Path to Montserrat-Regular.woff2 */
 }
 /* Font definition for 'Montserrat Preview' */
 @font-face {
@@ -51,7 +51,7 @@
   font-style: normal;
   font-weight: 400;
   font-display: block;
-  src: url("/webfonts-preview/Montserrat-Regular.woff2") format("woff2"); /* Path to Montserrat-Regular.woff2 for preview */
+  src: url("../webfonts-preview/Montserrat-Regular.woff2") format("woff2"); /* Path to Montserrat-Regular.woff2 for preview */
 }
 
 /* Font definition for 'Roboto' */
@@ -60,7 +60,7 @@
   font-style: normal;
   font-weight: 400;
   font-display: block;
-  src: url("/webfonts/Roboto-Regular.woff2") format("woff2"); /* Path to Roboto-Regular.woff2 */
+  src: url("../webfonts/Roboto-Regular.woff2") format("woff2"); /* Path to Roboto-Regular.woff2 */
 }
 /* Font definition for 'Roboto Preview' */
 @font-face {
@@ -68,7 +68,7 @@
   font-style: normal;
   font-weight: 400;
   font-display: block;
-  src: url("/webfonts-preview/Roboto-Regular.woff2") format("woff2"); /* Path to Roboto-Regular.woff2 for preview */
+  src: url("../webfonts-preview/Roboto-Regular.woff2") format("woff2"); /* Path to Roboto-Regular.woff2 for preview */
 }
 
 /* Font definition for 'Titillium Web' */
@@ -77,7 +77,7 @@
   font-style: normal;
   font-weight: 400;
   font-display: block;
-  src: url("/webfonts/TitilliumWeb-Regular.woff2") format("woff2"); /* Path to TitilliumWeb-Regular.woff2 */
+  src: url("../webfonts/TitilliumWeb-Regular.woff2") format("woff2"); /* Path to TitilliumWeb-Regular.woff2 */
 }
 /* Font definition for 'Titillium Web Preview' */
 @font-face {
@@ -85,7 +85,7 @@
   font-style: normal;
   font-weight: 400;
   font-display: block;
-  src: url("/webfonts-preview/TitilliumWeb-Regular.woff2") format("woff2"); /* Path to TitilliumWeb-Regular.woff2 for preview */
+  src: url("../webfonts-preview/TitilliumWeb-Regular.woff2") format("woff2"); /* Path to TitilliumWeb-Regular.woff2 for preview */
 }
 
 /* Font definition for 'Oxygen' */
@@ -94,7 +94,7 @@
   font-style: normal;
   font-weight: 400;
   font-display: block;
-  src: url("/webfonts/Oxygen-Regular.woff2") format("woff2"); /* Path to Oxygen-Regular.woff2 */
+  src: url("../webfonts/Oxygen-Regular.woff2") format("woff2"); /* Path to Oxygen-Regular.woff2 */
 }
 /* Font definition for 'Oxygen Preview' */
 @font-face {
@@ -102,7 +102,7 @@
   font-style: normal;
   font-weight: 400;
   font-display: block;
-  src: url("/webfonts-preview/Oxygen-Regular.woff2") format("woff2"); /* Path to Oxygen-Regular.woff2 for preview */
+  src: url("../webfonts-preview/Oxygen-Regular.woff2") format("woff2"); /* Path to Oxygen-Regular.woff2 for preview */
 }
 
 /* Font definition for 'Itim' */
@@ -111,7 +111,7 @@
   font-style: normal;
   font-weight: 400;
   font-display: block;
-  src: url("/webfonts/Itim-Regular.woff2") format("woff2"); /* Path to Itim-Regular.woff2 */
+  src: url("../webfonts/Itim-Regular.woff2") format("woff2"); /* Path to Itim-Regular.woff2 */
 }
 /* Font definition for 'Itim Preview' */
 @font-face {
@@ -119,7 +119,7 @@
   font-style: normal;
   font-weight: 400;
   font-display: block;
-  src: url("/webfonts-preview/Itim-Regular.woff2") format("woff2"); /* Path to Itim-Regular.woff2 for preview */
+  src: url("../webfonts-preview/Itim-Regular.woff2") format("woff2"); /* Path to Itim-Regular.woff2 for preview */
 }
 
 /* Font definition for 'Comfortaa' */
@@ -128,7 +128,7 @@
   font-style: normal;
   font-weight: 400;
   font-display: block;
-  src: url("/webfonts/Comfortaa-Regular.woff2") format("woff2"); /* Path to Comfortaa-Regular.woff2 */
+  src: url("../webfonts/Comfortaa-Regular.woff2") format("woff2"); /* Path to Comfortaa-Regular.woff2 */
 }
 /* Font definition for 'Comfortaa Preview' */
 @font-face {
@@ -136,7 +136,7 @@
   font-style: normal;
   font-weight: 400;
   font-display: block;
-  src: url("/webfonts-preview/Comfortaa-Regular.woff2") format("woff2"); /* Path to Comfortaa-Regular.woff2 for preview */
+  src: url("../webfonts-preview/Comfortaa-Regular.woff2") format("woff2"); /* Path to Comfortaa-Regular.woff2 for preview */
 }
 
 /* Font definition for 'Coming Soon' */
@@ -145,7 +145,7 @@
   font-style: normal;
   font-weight: 400;
   font-display: block;
-  src: url("/webfonts/ComingSoon-Regular.woff2") format("woff2"); /* Path to ComingSoon-Regular.woff2 */
+  src: url("../webfonts/ComingSoon-Regular.woff2") format("woff2"); /* Path to ComingSoon-Regular.woff2 */
 }
 /* Font definition for 'Coming Soon Preview' */
 @font-face {
@@ -153,7 +153,7 @@
   font-style: normal;
   font-weight: 400;
   font-display: block;
-  src: url("/webfonts-preview/ComingSoon-Regular.woff2") format("woff2"); /* Path to ComingSoon-Regular.woff2 for preview */
+  src: url("../webfonts-preview/ComingSoon-Regular.woff2") format("woff2"); /* Path to ComingSoon-Regular.woff2 for preview */
 }
 
 /* Font definition for 'Atkinson Hyperlegible' */
@@ -162,7 +162,7 @@
   font-style: normal;
   font-weight: 400;
   font-display: block;
-  src: url("/webfonts/AtkinsonHyperlegible-Regular.woff2") format("woff2"); /* Path to AtkinsonHyperlegible-Regular.woff2 */
+  src: url("../webfonts/AtkinsonHyperlegible-Regular.woff2") format("woff2"); /* Path to AtkinsonHyperlegible-Regular.woff2 */
 }
 /* Font definition for 'Atkinson Hyperlegible Preview' */
 @font-face {
@@ -170,7 +170,7 @@
   font-style: normal;
   font-weight: 400;
   font-display: block;
-  src: url("/webfonts-preview/AtkinsonHyperlegible-Regular.woff2") format("woff2"); /* Path to AtkinsonHyperlegible-Regular.woff2 for preview */
+  src: url("../webfonts-preview/AtkinsonHyperlegible-Regular.woff2") format("woff2"); /* Path to AtkinsonHyperlegible-Regular.woff2 for preview */
 }
 
 /* Font definition for 'Lato' */
@@ -179,7 +179,7 @@
   font-style: normal;
   font-weight: 400;
   font-display: block;
-  src: url("/webfonts/Lato-Regular.woff2") format("woff2"); /* Path to Lato-Regular.woff2 */
+  src: url("../webfonts/Lato-Regular.woff2") format("woff2"); /* Path to Lato-Regular.woff2 */
 }
 /* Font definition for 'Lato Preview' */
 @font-face {
@@ -187,7 +187,7 @@
   font-style: normal;
   font-weight: 400;
   font-display: block;
-  src: url("/webfonts-preview/Lato-Regular.woff2") format("woff2"); /* Path to Lato-Regular.woff2 for preview */
+  src: url("../webfonts-preview/Lato-Regular.woff2") format("woff2"); /* Path to Lato-Regular.woff2 for preview */
 }
 
 /* Font definition for 'Lalezar' */
@@ -196,7 +196,7 @@
   font-style: normal;
   font-weight: 400;
   font-display: block;
-  src: url("/webfonts/Lalezar-Regular.woff2") format("woff2"); /* Path to Lalezar-Regular.woff2 */
+  src: url("../webfonts/Lalezar-Regular.woff2") format("woff2"); /* Path to Lalezar-Regular.woff2 */
 }
 /* Font definition for 'Lalezar Preview' */
 @font-face {
@@ -204,7 +204,7 @@
   font-style: normal;
   font-weight: 400;
   font-display: block;
-  src: url("/webfonts-preview/Lalezar-Regular.woff2") format("woff2"); /* Path to Lalezar-Regular.woff2 for preview */
+  src: url("../webfonts-preview/Lalezar-Regular.woff2") format("woff2"); /* Path to Lalezar-Regular.woff2 for preview */
 }
 
 /* Font definition for 'Noto Naskh Arabic' */
@@ -213,7 +213,7 @@
   font-style: normal;
   font-weight: 400;
   font-display: block;
-  src: url("/webfonts/NotoNaskhArabic-Regular.woff2") format("woff2"); /* Path to NotoNaskhArabic-Regular.woff2 */
+  src: url("../webfonts/NotoNaskhArabic-Regular.woff2") format("woff2"); /* Path to NotoNaskhArabic-Regular.woff2 */
 }
 /* Font definition for 'Noto Naskh Arabic Preview' */
 @font-face {
@@ -221,7 +221,7 @@
   font-style: normal;
   font-weight: 400;
   font-display: block;
-  src: url("/webfonts-preview/NotoNaskhArabic-Regular.woff2") format("woff2"); /* Path to NotoNaskhArabic-Regular.woff2 for preview */
+  src: url("../webfonts-preview/NotoNaskhArabic-Regular.woff2") format("woff2"); /* Path to NotoNaskhArabic-Regular.woff2 for preview */
 }
 
 /* Font definition for 'Vazirmatn' */
@@ -230,7 +230,7 @@
   font-style: normal;
   font-weight: 400;
   font-display: block;
-  src: url("/webfonts/Vazirmatn-Regular.woff2") format("woff2"); /* Path to Vazirmatn-Regular.woff2 */
+  src: url("../webfonts/Vazirmatn-Regular.woff2") format("woff2"); /* Path to Vazirmatn-Regular.woff2 */
 }
 /* Font definition for 'Vazirmatn Preview' */
 @font-face {
@@ -238,7 +238,7 @@
   font-style: normal;
   font-weight: 400;
   font-display: block;
-  src: url("/webfonts-preview/Vazirmatn-Regular.woff2") format("woff2"); /* Path to Vazirmatn-Regular.woff2 for preview */
+  src: url("../webfonts-preview/Vazirmatn-Regular.woff2") format("woff2"); /* Path to Vazirmatn-Regular.woff2 for preview */
 }
 
 /* Font definition for 'Ubuntu' */
@@ -247,7 +247,7 @@
   font-style: normal;
   font-weight: 400;
   font-display: block;
-  src: url("/webfonts/Ubuntu-Regular.woff2") format("woff2"); /* Path to Ubuntu-Regular.woff2 */
+  src: url("../webfonts/Ubuntu-Regular.woff2") format("woff2"); /* Path to Ubuntu-Regular.woff2 */
 }
 /* Font definition for 'Ubuntu Preview' */
 @font-face {
@@ -255,7 +255,7 @@
   font-style: normal;
   font-weight: 400;
   font-display: block;
-  src: url("/webfonts-preview/Ubuntu-Regular.woff2") format("woff2"); /* Path to Ubuntu-Regular.woff2 for preview */
+  src: url("../webfonts-preview/Ubuntu-Regular.woff2") format("woff2"); /* Path to Ubuntu-Regular.woff2 for preview */
 }
 
 /* Font definition for 'Ubuntu Mono' */
@@ -264,7 +264,7 @@
   font-style: normal;
   font-weight: 400;
   font-display: block;
-  src: url("/webfonts/UbuntuMono-Regular.woff2") format("woff2"); /* Path to UbuntuMono-Regular.woff2 */
+  src: url("../webfonts/UbuntuMono-Regular.woff2") format("woff2"); /* Path to UbuntuMono-Regular.woff2 */
 }
 /* Font definition for 'Ubuntu Mono Preview' */
 @font-face {
@@ -272,7 +272,7 @@
   font-style: normal;
   font-weight: 400;
   font-display: block;
-  src: url("/webfonts-preview/UbuntuMono-Regular.woff2") format("woff2"); /* Path to UbuntuMono-Regular.woff2 for preview */
+  src: url("../webfonts-preview/UbuntuMono-Regular.woff2") format("woff2"); /* Path to UbuntuMono-Regular.woff2 for preview */
 }
 
 /* Font definition for 'Inconsolata' */
@@ -281,7 +281,7 @@
   font-style: normal;
   font-weight: 400;
   font-display: block;
-  src: url("/webfonts/Inconsolata-Regular.woff2") format("woff2"); /* Path to Inconsolata-Regular.woff2 */
+  src: url("../webfonts/Inconsolata-Regular.woff2") format("woff2"); /* Path to Inconsolata-Regular.woff2 */
 }
 /* Font definition for 'Inconsolata Preview' */
 @font-face {
@@ -289,7 +289,7 @@
   font-style: normal;
   font-weight: 400;
   font-display: block;
-  src: url("/webfonts-preview/Inconsolata-Regular.woff2") format("woff2"); /* Path to Inconsolata-Regular.woff2 for preview */
+  src: url("../webfonts-preview/Inconsolata-Regular.woff2") format("woff2"); /* Path to Inconsolata-Regular.woff2 for preview */
 }
 
 /* Font definition for 'IBM Plex Sans' (SemiBold) */
@@ -298,7 +298,7 @@
   font-style: normal;
   font-weight: 600;
   font-display: block;
-  src: url("/webfonts/IBMPlexSans-SemiBold.woff2") format("woff2"); /* Path to IBMPlexSans-SemiBold.woff2 */
+  src: url("../webfonts/IBMPlexSans-SemiBold.woff2") format("woff2"); /* Path to IBMPlexSans-SemiBold.woff2 */
 }
 /* Font definition for 'IBM Plex Sans Preview' (SemiBold) */
 @font-face {
@@ -306,7 +306,7 @@
   font-style: normal;
   font-weight: 600;
   font-display: block;
-  src: url("/webfonts-preview/IBMPlexSans-SemiBold.woff2") format("woff2"); /* Path to IBMPlexSans-SemiBold.woff2 for preview */
+  src: url("../webfonts-preview/IBMPlexSans-SemiBold.woff2") format("woff2"); /* Path to IBMPlexSans-SemiBold.woff2 for preview */
 }
 
 /* Font definition for 'Lexend Deca' */
@@ -315,7 +315,7 @@
   font-style: normal;
   font-weight: 400;
   font-display: block;
-  src: url("/webfonts/LexendDeca-Regular.woff2") format("woff2"); /* Path to LexendDeca-Regular.woff2 */
+  src: url("../webfonts/LexendDeca-Regular.woff2") format("woff2"); /* Path to LexendDeca-Regular.woff2 */
 }
 /* Font definition for 'Lexend Deca Preview' */
 @font-face {
@@ -323,7 +323,7 @@
   font-style: normal;
   font-weight: 400;
   font-display: block;
-  src: url("/webfonts-preview/LexendDeca-Regular.woff2") format("woff2"); /* Path to LexendDeca-Regular.woff2 for preview */
+  src: url("../webfonts-preview/LexendDeca-Regular.woff2") format("woff2"); /* Path to LexendDeca-Regular.woff2 for preview */
 }
 
 /* Font definition for 'Fira Code' */
@@ -332,7 +332,7 @@
   font-style: normal;
   font-weight: 400;
   font-display: block;
-  src: url("/webfonts/FiraCode-Regular.woff2") format("woff2"); /* Path to FiraCode-Regular.woff2 */
+  src: url("../webfonts/FiraCode-Regular.woff2") format("woff2"); /* Path to FiraCode-Regular.woff2 */
 }
 /* Font definition for 'Fira Code Preview' */
 @font-face {
@@ -340,7 +340,7 @@
   font-style: normal;
   font-weight: 400;
   font-display: block;
-  src: url("/webfonts-preview/FiraCode-Regular.woff2") format("woff2"); /* Path to FiraCode-Regular.woff2 for preview */
+  src: url("../webfonts-preview/FiraCode-Regular.woff2") format("woff2"); /* Path to FiraCode-Regular.woff2 for preview */
 }
 
 /* Font definition for 'Nunito' (Bold) */
@@ -349,7 +349,7 @@
   font-style: normal;
   font-weight: 700;
   font-display: block;
-  src: url("/webfonts/Nunito-Bold.woff2") format("woff2"); /* Path to Nunito-Bold.woff2 */
+  src: url("../webfonts/Nunito-Bold.woff2") format("woff2"); /* Path to Nunito-Bold.woff2 */
 }
 /* Font definition for 'Nunito Preview' (Bold) */
 @font-face {
@@ -357,7 +357,7 @@
   font-style: normal;
   font-weight: 700;
   font-display: block;
-  src: url("/webfonts-preview/Nunito-Bold.woff2") format("woff2"); /* Path to Nunito-Bold.woff2 for preview */
+  src: url("../webfonts-preview/Nunito-Bold.woff2") format("woff2"); /* Path to Nunito-Bold.woff2 for preview */
 }
 
 /* Font definition for 'Roboto Mono' */
@@ -366,7 +366,7 @@
   font-style: normal;
   font-weight: 400;
   font-display: block;
-  src: url("/webfonts/RobotoMono-Regular.woff2") format("woff2"); /* Path to RobotoMono-Regular.woff2 */
+  src: url("../webfonts/RobotoMono-Regular.woff2") format("woff2"); /* Path to RobotoMono-Regular.woff2 */
 }
 /* Font definition for 'Roboto Mono Preview' */
 @font-face {
@@ -374,7 +374,7 @@
   font-style: normal;
   font-weight: 400;
   font-display: block;
-  src: url("/webfonts-preview/RobotoMono-Regular.woff2") format("woff2"); /* Path to RobotoMono-Regular.woff2 for preview */
+  src: url("../webfonts-preview/RobotoMono-Regular.woff2") format("woff2"); /* Path to RobotoMono-Regular.woff2 for preview */
 }
 
 /* Font definition for 'Boon' */
@@ -383,7 +383,7 @@
   font-style: normal;
   font-weight: 400;
   font-display: block;
-  src: url("/webfonts/Boon-Regular.woff2") format("woff2"); /* Path to Boon-Regular.woff2 */
+  src: url("../webfonts/Boon-Regular.woff2") format("woff2"); /* Path to Boon-Regular.woff2 */
 }
 /* Font definition for 'Boon Preview' */
 @font-face {
@@ -391,7 +391,7 @@
   font-style: normal;
   font-weight: 400;
   font-display: block;
-  src: url("/webfonts-preview/Boon-Regular.woff2") format("woff2"); /* Path to Boon-Regular.woff2 for preview */
+  src: url("../webfonts-preview/Boon-Regular.woff2") format("woff2"); /* Path to Boon-Regular.woff2 for preview */
 }
 
 /* Font definition for 'Open Dyslexic' */
@@ -400,7 +400,7 @@
   font-style: normal;
   font-weight: 400;
   font-display: block;
-  src: url("/webfonts/OpenDyslexic-Regular.woff2") format("woff2"); /* Path to OpenDyslexic-Regular.woff2 */
+  src: url("../webfonts/OpenDyslexic-Regular.woff2") format("woff2"); /* Path to OpenDyslexic-Regular.woff2 */
 }
 /* Font definition for 'Open Dyslexic Preview' */
 @font-face {
@@ -408,7 +408,7 @@
   font-style: normal;
   font-weight: 400;
   font-display: block;
-  src: url("/webfonts-preview/OpenDyslexic-Regular.woff2") format("woff2"); /* Path to OpenDyslexic-Regular.woff2 for preview */
+  src: url("../webfonts-preview/OpenDyslexic-Regular.woff2") format("woff2"); /* Path to OpenDyslexic-Regular.woff2 for preview */
 }
 
 /* Font definition for 'Cascadia Mono' */
@@ -417,7 +417,7 @@
   font-style: normal;
   font-weight: 400;
   font-display: block;
-  src: url("/webfonts/CascadiaMono-Regular.woff2") format("woff2"); /* Path to CascadiaMono-Regular.woff2 */
+  src: url("../webfonts/CascadiaMono-Regular.woff2") format("woff2"); /* Path to CascadiaMono-Regular.woff2 */
 }
 /* Font definition for 'Cascadia Mono Preview' */
 @font-face {
@@ -425,7 +425,7 @@
   font-style: normal;
   font-weight: 400;
   font-display: block;
-  src: url("/webfonts-preview/CascadiaMono-Regular.woff2") format("woff2"); /* Path to CascadiaMono-Regular.woff2 for preview */
+  src: url("../webfonts-preview/CascadiaMono-Regular.woff2") format("woff2"); /* Path to CascadiaMono-Regular.woff2 for preview */
 }
 
 /* Font definition for 'IBM Plex Mono' */
@@ -434,7 +434,7 @@
   font-style: normal;
   font-weight: 400;
   font-display: block;
-  src: url("/webfonts/IBMPlexMono-Regular.woff2") format("woff2"); /* Path to IBMPlexMono-Regular.woff2 */
+  src: url("../webfonts/IBMPlexMono-Regular.woff2") format("woff2"); /* Path to IBMPlexMono-Regular.woff2 */
 }
 /* Font definition for 'IBM Plex Mono Preview' */
 @font-face {
@@ -442,7 +442,7 @@
   font-style: normal;
   font-weight: 400;
   font-display: block;
-  src: url("/webfonts-preview/IBMPlexMono-Regular.woff2") format("woff2"); /* Path to IBMPlexMono-Regular.woff2 for preview */
+  src: url("../webfonts-preview/IBMPlexMono-Regular.woff2") format("woff2"); /* Path to IBMPlexMono-Regular.woff2 for preview */
 }
 
 /* Font definition for 'Overpass Mono' */
@@ -451,7 +451,7 @@
   font-style: normal;
   font-weight: 400;
   font-display: block;
-  src: url("/webfonts/OverpassMono-Regular.woff2") format("woff2"); /* Path to OverpassMono-Regular.woff2 */
+  src: url("../webfonts/OverpassMono-Regular.woff2") format("woff2"); /* Path to OverpassMono-Regular.woff2 */
 }
 /* Font definition for 'Overpass Mono Preview' */
 @font-face {
@@ -459,7 +459,7 @@
   font-style: normal;
   font-weight: 400;
   font-display: block;
-  src: url("/webfonts-preview/OverpassMono-Regular.woff2") format("woff2"); /* Path to OverpassMono-Regular.woff2 for preview */
+  src: url("../webfonts-preview/OverpassMono-Regular.woff2") format("woff2"); /* Path to OverpassMono-Regular.woff2 for preview */
 }
 
 /* Font definition for 'Hack' */
@@ -468,7 +468,7 @@
   font-style: normal;
   font-weight: 400;
   font-display: block;
-  src: url("/webfonts/Hack-Regular.woff2") format("woff2"); /* Path to Hack-Regular.woff2 */
+  src: url("../webfonts/Hack-Regular.woff2") format("woff2"); /* Path to Hack-Regular.woff2 */
 }
 /* Font definition for 'Hack Preview' */
 @font-face {
@@ -476,7 +476,7 @@
   font-style: normal;
   font-weight: 400;
   font-display: block;
-  src: url("/webfonts-preview/Hack-Regular.woff2") format("woff2"); /* Path to Hack-Regular.woff2 for preview */
+  src: url("../webfonts-preview/Hack-Regular.woff2") format("woff2"); /* Path to Hack-Regular.woff2 for preview */
 }
 
 /* Font definition for 'CommitMono' */
@@ -485,7 +485,7 @@
   font-style: normal;
   font-weight: 400;
   font-display: block;
-  src: url("/webfonts/CommitMono-Regular.woff2") format("woff2"); /* Path to CommitMono-Regular.woff2 */
+  src: url("../webfonts/CommitMono-Regular.woff2") format("woff2"); /* Path to CommitMono-Regular.woff2 */
 }
 /* Font definition for 'CommitMono Preview' */
 @font-face {
@@ -493,7 +493,7 @@
   font-style: normal;
   font-weight: 400;
   font-display: block;
-  src: url("/webfonts-preview/CommitMono-Regular.woff2") format("woff2"); /* Path to CommitMono-Regular.woff2 for preview */
+  src: url("../webfonts-preview/CommitMono-Regular.woff2") format("woff2"); /* Path to CommitMono-Regular.woff2 for preview */
 }
 
 /* Font definition for 'Mononoki' */
@@ -502,7 +502,7 @@
   font-style: normal;
   font-weight: 400;
   font-display: block;
-  src: url("/webfonts/Mononoki-Regular.woff2") format("woff2"); /* Path to Mononoki-Regular.woff2 */
+  src: url("../webfonts/Mononoki-Regular.woff2") format("woff2"); /* Path to Mononoki-Regular.woff2 */
 }
 /* Font definition for 'Mononoki Preview' */
 @font-face {
@@ -510,7 +510,7 @@
   font-style: normal;
   font-weight: 400;
   font-display: block;
-  src: url("/webfonts-preview/Mononoki-Regular.woff2") format("woff2"); /* Path to Mononoki-Regular.woff2 for preview */
+  src: url("../webfonts-preview/Mononoki-Regular.woff2") format("woff2"); /* Path to Mononoki-Regular.woff2 for preview */
 }
 
 /* Font definition for 'Parkinsans' */
@@ -519,7 +519,7 @@
   font-style: normal;
   font-weight: 400;
   font-display: block;
-  src: url("/webfonts/Parkinsans-Regular.woff2") format("woff2"); /* Path to Parkinsans-Regular.woff2 */
+  src: url("../webfonts/Parkinsans-Regular.woff2") format("woff2"); /* Path to Parkinsans-Regular.woff2 */
 }
 /* Font definition for 'Parkinsans Preview' */
 @font-face {
@@ -527,7 +527,7 @@
   font-style: normal;
   font-weight: 400;
   font-display: block;
-  src: url("/webfonts-preview/Parkinsans-Regular.woff2") format("woff2"); /* Path to Parkinsans-Regular.woff2 for preview */
+  src: url("../webfonts-preview/Parkinsans-Regular.woff2") format("woff2"); /* Path to Parkinsans-Regular.woff2 for preview */
 }
 
 /* Font definition for 'Geist' (Medium) */
@@ -536,7 +536,7 @@
   font-style: normal;
   font-weight: 400; /* Note: SCSS had 'Geist-Medium', typically maps to 500, but compiled CSS shows 400. Keeping as per compiled output. */
   font-display: block;
-  src: url("/webfonts/Geist-Medium.woff2") format("woff2"); /* Path to Geist-Medium.woff2 */
+  src: url("../webfonts/Geist-Medium.woff2") format("woff2"); /* Path to Geist-Medium.woff2 */
 }
 /* Font definition for 'Geist Preview' (Medium) */
 @font-face {
@@ -544,7 +544,7 @@
   font-style: normal;
   font-weight: 400; /* Note: SCSS had 'Geist-Medium', typically maps to 500, but compiled CSS shows 400. Keeping as per compiled output. */
   font-display: block;
-  src: url("/webfonts-preview/Geist-Medium.woff2") format("woff2"); /* Path to Geist-Medium.woff2 for preview */
+  src: url("../webfonts-preview/Geist-Medium.woff2") format("woff2"); /* Path to Geist-Medium.woff2 for preview */
 }
 
 /* Font definition for 'Geist Mono' (Medium) */
@@ -553,7 +553,7 @@
   font-style: normal;
   font-weight: 400; /* Note: SCSS had 'GeistMono-Medium', typically maps to 500, but compiled CSS shows 400. Keeping as per compiled output. */
   font-display: block;
-  src: url("/webfonts/GeistMono-Medium.woff2") format("woff2"); /* Path to GeistMono-Medium.woff2 */
+  src: url("../webfonts/GeistMono-Medium.woff2") format("woff2"); /* Path to GeistMono-Medium.woff2 */
 }
 /* Font definition for 'Geist Mono Preview' (Medium) */
 @font-face {
@@ -561,5 +561,5 @@
   font-style: normal;
   font-weight: 400; /* Note: SCSS had 'GeistMono-Medium', typically maps to 500, but compiled CSS shows 400. Keeping as per compiled output. */
   font-display: block;
-  src: url("/webfonts-preview/GeistMono-Medium.woff2") format("woff2"); /* Path to GeistMono-Medium.woff2 for preview */
+  src: url("../webfonts-preview/GeistMono-Medium.woff2") format("woff2"); /* Path to GeistMono-Medium.woff2 for preview */
 }
