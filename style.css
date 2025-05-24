@@ -1,13 +1,18 @@
 /* MonkeyType-inspired CSS */
 :root {
-    --bg-color: #323437;
-    --main-color: #e2b714;
-    --text-color: #d1d0c5;
-    --sub-color: #646669;
-    --sub-alt-color: #2c2e31;
-    --error-color: #ca4754;
-    --font-family: 'Roboto Mono', monospace;
-    --roundness: 4px;
+    --bg-color: #282828;
+    --main-color: #d79921;
+    --caret-color: #fabd2f; /* Add if appropriate, or adapt usage */
+    --text-color: #ebdbb2;
+    --sub-color: #665c54;
+    --sub-alt-color: #212121; /* This was the original sub-alt-color */
+    --error-color: #fb4934;
+    --error-extra-color: #cc241d;
+    --colorful-error-color: #cc241d; /* For specific error states if used */
+    --colorful-error-extra-color: #9d0006; /* For specific error states if used */
+    /* Keep existing --font-family and --roundness or update if Gruvbox has specific values */
+    --font-family: 'Roboto Mono', monospace; /* Ensure this is primary */
+    --roundness: 4px; /* Keep or adjust if Gruvbox has a different standard */
 }
 
 * {
@@ -140,26 +145,26 @@ header {
 
 .textButton:hover {
     color: var(--text-color);
-    background: none;
+    background-color: rgba(255, 255, 255, 0.05); /* Subtle background change on hover */
     outline: none;
 }
 
 .textButton:active {
-    color: var(--sub-color);
-    background: none;
+    color: var(--sub-color); /* Keep active state distinct */
+    background-color: rgba(0, 0, 0, 0.05); /* Slightly darker feedback for active */
 }
 
 .textButton.active {
     color: var(--main-color);
-    background: none;
+    background: none; /* Active navigation item should primarily use text color for indication */
 }
 
 /* Content Area */
 .content-area {
     flex: 1;
     padding: 2rem;
-    background-color: rgba(50, 52, 55, 0.3);
-    border-radius: 5px;
+    background-color: rgba(33, 33, 33, 0.3); /* Updated to use new --sub-alt-color with alpha */
+    border-radius: var(--roundness);
     overflow-y: auto;
 }
 
@@ -224,9 +229,24 @@ header {
     border-left: 2px solid var(--main-color);
 }
 
+/* Enhance readability of all text within hovered main-offer */
+.main-offer:hover .typing-text,
+.main-offer:hover .footnote-info,
+.main-offer:hover .supplementary-info {
+    color: var(--text-color); 
+}
+
+/* Ensure offer-title also transitions smoothly if its properties were to change on hover */
 .offer-title {
     color: var(--main-color);
     font-weight: 500;
+    transition: color 0.15s ease; 
+}
+
+/* Transition for sub-text elements */
+.footnote-info,
+.supplementary-info {
+    transition: color 0.15s ease;
 }
 
 .sub-offer {
@@ -264,6 +284,7 @@ header {
 .skill-item {
     position: relative;
     padding-left: 1rem;
+    transition: color 0.15s ease;
 }
 
 .skill-item::before {
@@ -271,6 +292,15 @@ header {
     position: absolute;
     left: 0;
     color: var(--main-color);
+    transition: color 0.15s ease; /* Add transition for smooth color change */
+}
+
+.skill-item:hover {
+    color: var(--main-color); /* Make text more prominent on hover */
+}
+
+.skill-item:hover::before {
+    color: var(--caret-color); /* Change bullet color on hover */
 }
 
 .constraint-list {
@@ -313,7 +343,7 @@ footer {
 
 @keyframes blink {
     from, to { border-color: transparent }
-    50% { border-color: var(--main-color) }
+    50% { border-color: var(--caret-color) } /* Updated to use --caret-color */
 }
 
 @keyframes fadeInUp {
@@ -325,6 +355,21 @@ footer {
         opacity: 1;
         transform: translateY(0);
     }
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-color);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--sub-color);
+  border-radius: var(--roundness);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--main-color);
 }
 
 /* Responsive Design */
@@ -357,7 +402,7 @@ footer {
     position: absolute;
     width: 3px;
     height: 3px;
-    background-color: var(--main-color);
+    background-color: var(--caret-color); /* Updated to use --caret-color */
     border-radius: 50%;
     pointer-events: none;
     opacity: 0.3;
